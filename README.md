@@ -24,4 +24,4 @@
 
 ## Demo Link
 
-[Live Demo](https://ram-react-mettasphere-ui.netlify.app/home)
+[Live Demo](https://metasphere-ui.sreeramraghu.online/)
