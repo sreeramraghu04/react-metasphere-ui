@@ -1,0 +1,34 @@
+@import "tailwindcss";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Accent theme system */
+:root {
+  --accent: #a855f7; /* purple */
+}
+
+[data-accent="purple"] {
+  --accent: #a855f7;
+}
+[data-accent="blue"] {
+  --accent: #3b82f6;
+}
+[data-accent="cyan"] {
+  --accent: #06b6d4;
+}
+[data-accent="pink"] {
+  --accent: #ec4899;
+}
+
+/* Utility */
+.accent-bg {
+  background-color: var(--accent);
+}
+.accent-text {
+  color: var(--accent);
+}
+.accent-border {
+  border-color: var(--accent);
+}
