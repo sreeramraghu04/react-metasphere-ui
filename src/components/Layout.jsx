@@ -15,7 +15,7 @@ export default function Layout() {
     <div className="flex flex-col lg:flex-row min-h-screen bg-neutral-900 text-gray-100">
       {/* Mobile Header */}
       <header className="lg:hidden flex items-center justify-between p-4 border-b border-white/10 bg-neutral-800">
-        <h1 className={`text-xl font-bold text-${accent}-500`}>
+        <h1 className={`text-2xl font-bold text-${accent}-500`}>
           🌌 MetaSphere UI
         </h1>
         <button

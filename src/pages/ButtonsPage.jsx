@@ -296,11 +296,11 @@ export default function ButtonsPage() {
           </p>
         </header>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-6 md:gap-8 lg:gap-10">
           {buttons.map((btn, index) => (
             <div
               key={`${btn.variant}-${index}`}
-              className="p-4 md:p-6 rounded-xl border border-white/10 bg-neutral-800/50 backdrop-blur-sm flex flex-col items-center gap-4 shadow-lg hover:shadow-xl transition-all duration-300"
+              className="p-4 sm:p-5 md:p-6 rounded-xl border border-white/10 bg-neutral-800/80 backdrop-blur-sm flex flex-col items-center gap-4 md:gap-5 shadow-2xl hover:shadow-purple-500/10 transition-all duration-300 transform hover:-translate-y-1"
             >
               {/* Preview */}
               <div className="h-16 flex items-center justify-center">
