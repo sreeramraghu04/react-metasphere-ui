@@ -13,6 +13,7 @@ export default function App() {
   return (
     <Routes>
       <Route path="/" element={<Layout />}>
+      
         {/* Redirect "/" to home page */}
         <Route index element={<Navigate to="/home" />} />
 

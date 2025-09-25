@@ -9,111 +9,122 @@ const getLinkClass = (isActive, accent) =>
 
 export default function Layout() {
   const { accent } = useContext(ThemeContext);
+
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
-    <div className="flex flex-col lg:flex-row min-h-screen bg-neutral-900 text-gray-100">
-      {/* Mobile Header */}
-      <header className="lg:hidden flex items-center justify-between p-4 border-b border-white/10 bg-neutral-800">
-        <h1 className={`text-2xl font-bold text-${accent}-500`}>
-          🌌 MetaSphere UI
-        </h1>
-        <button
-          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          className="p-2 rounded-lg hover:bg-gray-700 transition-colors"
-          aria-label="Toggle menu"
-        >
-          <svg
-            className="w-6 h-6"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            {isMobileMenuOpen ? (
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M6 18L18 6M6 6l12 12"
-              />
-            ) : (
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M4 6h16M4 12h16M4 18h16"
-              />
-            )}
-          </svg>
-        </button>
-      </header>
-
-      {/* Sidebar */}
-      <aside
-        className={`
-          fixed lg:static inset-y-0 left-0 z-50 w-64 bg-neutral-900 border-r border-white/10 p-6 flex flex-col justify-between
-          transform transition-transform duration-300 ease-in-out lg:translate-x-0
-          ${isMobileMenuOpen ? "translate-x-0" : "-translate-x-full"}
-        `}
-      >
-        <div>
+    <div className="flex flex-col gap-5 lg:flex-row min-h-screen bg-gradient-to-br from-neutral-900 via-purple-950 to-black text-gray-100 p-5">
+      <div>
+        {/* Mobile Header */}
+        <header className="lg:hidden flex items-center justify-between p-6 rounded-xl border border-purple-500/50 bg-gradient-to-br from-neutral-900 via-purple-950 to-black">
           <h1
-            className={`text-xl font-bold mb-6 text-${accent}-500 lg:block hidden`}
+            className="text-2xl font-bold bg-gradient-to-r from-purple-400 via-pink-500 to-fuchsia-400 
+               bg-clip-text text-transparent drop-shadow-[0_0_10px_rgba(236,72,153,0.7)]"
           >
-            🌌 MetaSphere UI
+            MetaSphere UI
           </h1>
-          <nav className="flex flex-col gap-2">
-            <NavLink
-              to="/home"
-              className={({ isActive }) => getLinkClass(isActive, accent)}
-              onClick={() => setIsMobileMenuOpen(false)}
+          <button
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            className="p-2 rounded-lg hover:bg-gray-700 transition-colors"
+            aria-label="Toggle menu"
+          >
+            <svg
+              className="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
             >
-              Home
-            </NavLink>
-            <NavLink
-              to="/buttons"
-              className={({ isActive }) => getLinkClass(isActive, accent)}
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              Buttons
-            </NavLink>
-            <NavLink
-              to="/toggles"
-              className={({ isActive }) => getLinkClass(isActive, accent)}
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              Toggles
-            </NavLink>
-            <NavLink
-              to="/loaders"
-              className={({ isActive }) => getLinkClass(isActive, accent)}
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              Loaders
-            </NavLink>
-            <NavLink
-              to="/cards"
-              className={({ isActive }) => getLinkClass(isActive, accent)}
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              Cards
-            </NavLink>
-          </nav>
-        </div>
-      </aside>
+              {isMobileMenuOpen ? (
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              ) : (
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              )}
+            </svg>
+          </button>
+        </header>
 
-      {/* Overlay for mobile menu */}
-      {isMobileMenuOpen && (
-        <div
-          className="fixed inset-0 bg-black bg-opacity-50 z-40 lg:hidden"
-          onClick={() => setIsMobileMenuOpen(false)}
-        />
-      )}
+        {/* Sidebar */}
+        <aside
+          className={`
+          fixed lg:static inset-y-5 left-0 z-50 w-64 bg-gradient-to-br from-neutral-900 via-purple-950 to-black rounded-xl border border-purple-500/50 p-6 flex flex-col justify-between lg:h-auto md:h-auto h-[300px]
+          transform transition-transform duration-300 ease-in-out lg:translate-x-0
+          ${isMobileMenuOpen ? "translate-x-0 left-5" : "-translate-x-full"}
+        `}
+        >
+          <div className="p-4">
+            <h1
+              className={`text-xl font-bold mb-6 text-${accent}-500 lg:block hidden`}
+            >
+              MetaSphere UI
+            </h1>
+            <nav className="flex flex-col gap-2">
+              <NavLink
+                to="/home"
+                className={({ isActive }) => getLinkClass(isActive, accent)}
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Home
+              </NavLink>
+              <NavLink
+                to="/buttons"
+                className={({ isActive }) => getLinkClass(isActive, accent)}
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Buttons
+              </NavLink>
+              <NavLink
+                to="/toggles"
+                className={({ isActive }) => getLinkClass(isActive, accent)}
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Toggles
+              </NavLink>
+              <NavLink
+                to="/loaders"
+                className={({ isActive }) => getLinkClass(isActive, accent)}
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Loaders
+              </NavLink>
+              <NavLink
+                to="/cards"
+                className={({ isActive }) => getLinkClass(isActive, accent)}
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Cards
+              </NavLink>
+            </nav>
+          </div>
+        </aside>
+
+        {/* Overlay for mobile menu */}
+        {isMobileMenuOpen && (
+          <div
+            className="fixed inset-0 bg-gradient-to-br from-neutral-900 via-purple-950 to-black opacity-80 z-40 lg:hidden"
+            onClick={() => setIsMobileMenuOpen(false)}
+          />
+        )}
+      </div>
 
       {/* Main Content */}
-      <main className="flex-1 p-4 md:p-6 lg:p-8 w-full">
-        <Outlet />
-      </main>
+      <div className="w-full flex-1">
+        <main
+          className="p-5 rounded-xl border border-purple-500/50 
+           bg-gradient-to-br from-neutral-900 via-purple-950 to-black"
+        >
+          <Outlet />
+        </main>
+      </div>
     </div>
   );
 }

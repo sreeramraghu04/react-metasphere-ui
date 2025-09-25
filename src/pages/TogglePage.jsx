@@ -293,14 +293,14 @@ export default function ToggleSwitch({
   },
   {
     name: "Small Toggle",
-    variant: "neon",
+    variant: "smneon",
     size: "sm",
-    usage: `<ToggleSwitch variant="neon" size="sm" />`,
+    usage: `<ToggleSwitch variant="smneon" size="sm" />`,
     component: `
 import React, { useState } from "react";
 
 const variants = {
-  neon: {
+  smneon: {
     on: "bg-purple-500 shadow-[0_0_15px_rgba(168,85,247,0.8)]",
     off: "bg-gray-700",
     knobOn: "bg-white",
@@ -315,12 +315,12 @@ const sizes = {
 export default function ToggleSwitch({ 
   label, 
   initial = false, 
-  variant = "neon", 
+  variant = "smneon", 
   size = "sm", 
   onToggle 
 }) {
   const [enabled, setEnabled] = useState(initial);
-  const v = variants[variant] || variants.neon;
+  const v = variants[variant] || variants.smneon;
   const s = sizes[size] || sizes.sm;
 
   const handleClick = () => {
@@ -338,7 +338,7 @@ export default function ToggleSwitch({
         className={\`relative \${s.wrapper} rounded-full transition-colors duration-300 flex items-center overflow-hidden \${enabled ? v.on : v.off}\`}
         aria-pressed={enabled}
       >
-        {enabled && variant === "neon" && (
+        {enabled && variant === "smneon" && (
           <span className="absolute inset-0 rounded-full bg-purple-500 blur-md opacity-30 z-0" />
         )}
 
@@ -352,14 +352,14 @@ export default function ToggleSwitch({
   },
   {
     name: "Large Toggle",
-    variant: "neon",
+    variant: "lgneon",
     size: "lg",
-    usage: `<ToggleSwitch variant="neon" size="lg" />`,
+    usage: `<ToggleSwitch variant="lgneon" size="lg" />`,
     component: `
 import React, { useState } from "react";
 
 const variants = {
-  neon: {
+  lgneon: {
     on: "bg-purple-500 shadow-[0_0_15px_rgba(168,85,247,0.8)]",
     off: "bg-gray-700",
     knobOn: "bg-white",
@@ -374,12 +374,12 @@ const sizes = {
 export default function ToggleSwitch({ 
   label, 
   initial = false, 
-  variant = "neon", 
+  variant = "lgneon", 
   size = "lg", 
   onToggle 
 }) {
   const [enabled, setEnabled] = useState(initial);
-  const v = variants[variant] || variants.neon;
+  const v = variants[variant] || variants.lgneon;
   const s = sizes[size] || sizes.lg;
 
   const handleClick = () => {
@@ -397,7 +397,7 @@ export default function ToggleSwitch({
         className={\`relative \${s.wrapper} rounded-full transition-colors duration-300 flex items-center overflow-hidden \${enabled ? v.on : v.off}\`}
         aria-pressed={enabled}
       >
-        {enabled && variant === "neon" && (
+        {enabled && variant === "lgneon" && (
           <span className="absolute inset-0 rounded-full bg-purple-500 blur-md opacity-30 z-0" />
         )}
 
@@ -411,14 +411,14 @@ export default function ToggleSwitch({
   },
   {
     name: "Disabled Toggle",
-    variant: "neon",
+    variant: "dsbneon",
     size: "md",
-    usage: `<ToggleSwitch variant="neon" disabled />`,
+    usage: `<ToggleSwitch variant="dsbneon" disabled />`,
     component: `
 import React, { useState } from "react";
 
 const variants = {
-  neon: {
+  dsbneon: {
     on: "bg-purple-500 shadow-[0_0_15px_rgba(168,85,247,0.8)]",
     off: "bg-gray-700",
     knobOn: "bg-white",
@@ -433,13 +433,13 @@ const sizes = {
 export default function ToggleSwitch({ 
   label, 
   initial = false, 
-  variant = "neon", 
+  variant = "dsbneon", 
   size = "md", 
   onToggle,
   disabled = false 
 }) {
   const [enabled, setEnabled] = useState(initial);
-  const v = variants[variant] || variants.neon;
+  const v = variants[variant] || variants.dsbneon;
   const s = sizes[size] || sizes.md;
 
   const handleClick = () => {
@@ -459,7 +459,7 @@ export default function ToggleSwitch({
         className={\`relative \${s.wrapper} rounded-full transition-colors duration-300 flex items-center overflow-hidden \${enabled ? v.on : v.off} \${disabled ? "cursor-not-allowed" : "cursor-pointer"}\`}
         aria-pressed={enabled}
       >
-        {enabled && variant === "neon" && (
+        {enabled && variant === "dsbneon" && (
           <span className="absolute inset-0 rounded-full bg-purple-500 blur-md opacity-30 z-0" />
         )}
 
@@ -475,6 +475,7 @@ export default function ToggleSwitch({
 
 export default function TogglePage() {
   const [copiedItem, setCopiedItem] = useState(null);
+  
   const [copiedType, setCopiedType] = useState(null);
 
   const copyToClipboard = (text, itemIndex, type) => {

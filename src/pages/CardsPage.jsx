@@ -197,6 +197,7 @@ export default function PricingCardExample() {
 
 export default function CardsPage() {
   const [copiedCard, setCopiedCard] = useState(null);
+  
   const [copiedType, setCopiedType] = useState(null);
 
   const copyToClipboard = (text, cardIndex, type) => {
@@ -224,15 +225,18 @@ export default function CardsPage() {
           </p>
         </header>
         {/* Cards Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-6 md:gap-8 lg:gap-10">
+        <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-6 md:gap-8 lg:gap-10 items-start">
           {cards.map((card, index) => (
             <div
               key={index}
-              className="p-4 sm:p-5 md:p-6 rounded-xl border border-white/10 bg-neutral-800/80 backdrop-blur-sm flex flex-col items-center gap-4 md:gap-5 shadow-2xl hover:shadow-purple-500/10 transition-all duration-300 transform hover:-translate-y-1"
+              className="inline-block p-4 sm:p-5 md:p-6 rounded-xl border border-white/10 
+             bg-neutral-800/80 flex-col items-center gap-4 md:gap-5 
+             shadow-2xl hover:shadow-purple-500/10 transition-all duration-300 
+             transform hover:-translate-y-1 w-auto h-auto"
             >
-              {/* Preview */}
-              <div className="w-full flex justify-center mb-2">
-                {card.preview}
+              {/* Preview - Allow card to take natural size */}
+              <div className="flex justify-center mb-2 w-full max-w-[300px] items-center">
+                <div className="max-w-full w-full h-auto">{card.preview}</div>
               </div>
 
               {/* Card Name */}

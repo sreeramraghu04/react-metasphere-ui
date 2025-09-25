@@ -9,12 +9,12 @@ export default function Home() {
     <div className="relative flex flex-col items-center justify-center min-h-screen text-center px-4 sm:px-6 lg:px-8 py-10 overflow-hidden bg-gradient-to-br from-neutral-900 via-purple-950 to-black">
       {/* Animated glowing stars */}
       <div className="absolute inset-0">
-        <div className="w-full h-full bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[length:20px_20px] animate-[spin_120s_linear_infinite]"></div>
+        <div className="w-full h-[950px] bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_2.5px)] bg-[length:20px_20px] animate-[spin_120s_linear_infinite]"></div>
       </div>
 
       {/* Content */}
       <div className="relative z-10 flex flex-col items-center gap-4 sm:gap-6 w-full max-w-4xl">
-        <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold animate-pulse">
+        <h1 className="text-3xl sm:text-5xl md:text-6xl font-extrabold animate-pulse">
           🌌
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-500 to-indigo-400 animate-pulse">
             Welcome to MetaSphere UI
@@ -35,13 +35,14 @@ export default function Home() {
             Explore Buttons
           </a>
 
-          <div className="w-full sm:w-auto relative flex items-center justify-center px-4 py-4 sm:px-6 sm:py-6 rounded-xl sm:rounded-2xl bg-gradient-to-r from-cyan-400 via-sky-500 to-blue-500 text-white font-semibold shadow-lg hover:scale-105 sm:hover:scale-110 hover:shadow-[0_0_20px_rgba(6,182,212,0.7)] transform transition duration-300 gap-2 cursor-pointer text-sm sm:text-base">
+          <div className="w-full sm:w-auto relative flex items-center justify-center px-4 py-4 sm:px-6 sm:py-6 rounded-xl sm:rounded-2xl bg-gradient-to-r from-cyan-400 via-sky-500 to-blue-500 text-white font-semibold shadow-lg hover:scale-105 sm:hover:scale-110 hover:shadow-[0_0_20px_rgba(6,182,212,0.7)] transform transition duration-300 gap-2 text-sm sm:text-base">
             <ToggleSwitch
               initial={false}
               label=""
               onToggle={(state) => {
                 if (state) navigate("/toggles");
               }}
+              className="cursor-pointer"
             />
             <span>Explore Toggles</span>
           </div>

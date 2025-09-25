@@ -2,7 +2,11 @@
 import React from "react";
 
 // Basic Unique Card
-export function BasicCard({ title, description, children }) {
+export function BasicCard({
+  title,
+  description,
+  children,
+}) {
   return (
     <div className="relative p-6 rounded-xl bg-gradient-to-br from-purple-900/30 to-pink-800/30 border border-purple-500/30 backdrop-blur-sm shadow-lg">
       <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 to-pink-500/10 rounded-xl shadow-lg shadow-purple-500/20"></div>
@@ -251,5 +255,4 @@ export function PricingCard({
   );
 }
 
-// Default export (for backward compatibility)
 export default BasicCard;

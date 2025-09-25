@@ -51,7 +51,9 @@ export default function ToggleSwitch({
   disabled = false,
 }) {
   const [enabled, setEnabled] = useState(initial);
+
   const v = variants[variant] || variants.neon;
+  
   const s = sizes[size] || sizes.md;
 
   const handleClick = () => {

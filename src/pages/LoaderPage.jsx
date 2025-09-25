@@ -133,6 +133,7 @@ export default function Loader({ variant = "glow" }) {
 
 export default function LoaderPage() {
   const [copiedItem, setCopiedItem] = useState(null);
+  
   const [copiedType, setCopiedType] = useState(null);
 
   const copyToClipboard = (text, itemIndex, type) => {
