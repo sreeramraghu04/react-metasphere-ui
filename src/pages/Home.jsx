@@ -9,7 +9,7 @@ export default function Home() {
     <div className="relative flex flex-col min-h-screen text-center overflow-hidden bg-gradient-to-br from-neutral-900 via-purple-950 to-black">
       {/* Animated glowing stars */}
       <div className="absolute inset-0">
-        <div className="w-full h-[950px] bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_2.5px)] bg-[length:20px_20px] animate-[spin_120s_linear_infinite]"></div>
+        <div className="w-full h-[990px] bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_2.5px)] bg-[length:20px_20px] animate-[spin_120s_linear_infinite]"></div>
       </div>
 
       {/* Main content */}
@@ -23,8 +23,8 @@ export default function Home() {
 
         <p className="text-gray-300 text-base sm:text-lg md:text-xl max-w-xl md:max-w-2xl mt-4">
           A futuristic React & TailwindCSS component library showcasing Neon
-          Buttons, Toggle Switches, Loaders, Inputs, Cards, Navigation, and cool
-          Effects. Preview, copy usage, or get full component code instantly!
+          Buttons, Toggle Switches, Loaders and cool Cards. Preview, copy usage,
+          or get full component code instantly!
         </p>
 
         {/* Quick links */}
@@ -65,7 +65,8 @@ export default function Home() {
         {/* Small note */}
         <p className="text-gray-500 mt-6 sm:mt-12 text-xs sm:text-sm max-w-md md:max-w-xl px-2">
           Click any section above to view previews and copy code for your
-          projects.
+          projects. More components, updates, and collections are rolling out
+          soon.
         </p>
       </main>
 
@@ -73,17 +74,11 @@ export default function Home() {
       <footer className="relative z-10 w-full border-t border-purple-900/40 bg-gradient-to-r from-transparent via-purple-950/20 to-transparent py-6">
         <div className="flex flex-col md:flex-row items-center justify-between max-w-5xl mx-auto px-4 gap-4 text-gray-400 text-sm">
           {/* Left side */}
-          <div className="flex items-center gap-2">
-            <span className="text-lg">🌌</span>
-            <span className="font-semibold text-gray-300">MetaSphere UI</span>
-          </div>
-
-          {/* Center */}
           <p className="text-xs sm:text-sm text-gray-400 text-center">
             Crafted by{" "}
             <span className="text-purple-400 font-semibold hover:text-pink-400 transition">
               Ram⚡
-            </span>{" "}
+            </span>
             © {new Date().getFullYear()}
           </p>
 
