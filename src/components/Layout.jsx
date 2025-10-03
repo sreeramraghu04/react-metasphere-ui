@@ -1,6 +1,5 @@
 import React, { useContext, useState } from "react";
 import { NavLink, Outlet } from "react-router-dom";
-import { ThemeContext } from "../context/ThemeContext";
 
 const getLinkClass = (isActive, accent) =>
   `px-3 py-2 md:px-2 md:py-1 rounded-lg md:rounded hover:bg-gray-700 transition-colors duration-200 ${
@@ -8,12 +7,10 @@ const getLinkClass = (isActive, accent) =>
   }`;
 
 export default function Layout() {
-  const { accent } = useContext(ThemeContext);
-
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
-    <div className="flex flex-col gap-5 lg:flex-row min-h-screen bg-gradient-to-br from-neutral-900 via-purple-950 to-black text-gray-100 p-5">
+    <div className="flex flex-col gap-5 lg:flex-row min-h-screen bg-gradient-to-br from-neutral-900 via-purple-950 to-black text-gray-100 p-8">
       <div>
         {/* Mobile Header */}
         <header className="lg:hidden flex items-center justify-between p-6 rounded-xl border border-purple-500/50 bg-gradient-to-br from-neutral-900 via-purple-950 to-black">
@@ -63,42 +60,43 @@ export default function Layout() {
         >
           <div className="p-4">
             <h1
-              className={`text-xl font-bold mb-6 text-${accent}-500 lg:block hidden`}
+              className={`text-xl font-bold mb-6 bg-gradient-to-r from-purple-400 via-pink-500 to-fuchsia-400 
+               bg-clip-text text-transparent drop-shadow-[0_0_10px_rgba(236,72,153,0.7)] lg:block hidden`}
             >
               MetaSphere UI
             </h1>
             <nav className="flex flex-col gap-2">
               <NavLink
                 to="/home"
-                className={({ isActive }) => getLinkClass(isActive, accent)}
+                className={({ isActive }) => getLinkClass(isActive)}
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Home
               </NavLink>
               <NavLink
                 to="/buttons"
-                className={({ isActive }) => getLinkClass(isActive, accent)}
+                className={({ isActive }) => getLinkClass(isActive)}
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Buttons
               </NavLink>
               <NavLink
                 to="/toggles"
-                className={({ isActive }) => getLinkClass(isActive, accent)}
+                className={({ isActive }) => getLinkClass(isActive)}
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Toggles
               </NavLink>
               <NavLink
                 to="/loaders"
-                className={({ isActive }) => getLinkClass(isActive, accent)}
+                className={({ isActive }) => getLinkClass(isActive)}
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Loaders
               </NavLink>
               <NavLink
                 to="/cards"
-                className={({ isActive }) => getLinkClass(isActive, accent)}
+                className={({ isActive }) => getLinkClass(isActive)}
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Cards

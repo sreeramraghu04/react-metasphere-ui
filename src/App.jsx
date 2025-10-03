@@ -19,9 +19,9 @@ export default function App() {
 
         {/* Core Pages */}
         <Route path="home" element={<Home />} />
-        <Route path="buttons" element={<ButtonsPage />} />
-        <Route path="toggles" element={<TogglePage />} />
-        <Route path="loaders" element={<LoaderPage />} />
+        <Route path="/buttons" element={<ButtonsPage />} />
+        <Route path="/toggles" element={<TogglePage />} />
+        <Route path="/loaders" element={<LoaderPage />} />
         <Route path="cards" element={<CardsPage />} />
       </Route>
     </Routes>
