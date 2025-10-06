@@ -14,7 +14,7 @@ export default function Home() {
 
       {/* Main content */}
       <main className="flex flex-col items-center justify-center flex-grow relative z-10 px-4 sm:px-6 lg:px-8 py-10">
-        <h1 className="text-3xl sm:text-5xl md:text-6xl font-extrabold animate-pulse">
+        <h1 className="text-3xl sm:text-4xl md:text-6xl font-extrabold animate-pulse">
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-500 to-indigo-400 animate-pulse">
             Welcome to MetaSphere UI
           </span>
