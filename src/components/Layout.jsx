@@ -53,19 +53,19 @@ export default function Layout() {
         {/* Sidebar */}
         <aside
           className={`
-          fixed lg:static inset-y-5 left-0 z-50 w-64 bg-gradient-to-br from-neutral-900 via-purple-950 to-black rounded-xl border border-purple-500/50 p-6 flex flex-col justify-between lg:h-auto md:h-auto h-[300px]
+          fixed lg:static inset-y-5 left-0 z-50 w-64 bg-gradient-to-br from-neutral-900 via-purple-950 to-black rounded-xl border border-purple-500/50 p-6 flex flex-col justify-between lg:h-auto md:h-auto h-[275px]
           transform transition-transform duration-300 ease-in-out lg:translate-x-0
           ${isMobileMenuOpen ? "translate-x-0 left-5" : "-translate-x-full"}
         `}
         >
           <div className="p-4">
             <h1
-              className={`text-xl font-bold mb-6 bg-gradient-to-r from-purple-400 via-pink-500 to-fuchsia-400 
+              className={`text-2xl font-bold mb-6 bg-gradient-to-r from-purple-400 via-pink-500 to-fuchsia-400 
                bg-clip-text text-transparent drop-shadow-[0_0_10px_rgba(236,72,153,0.7)] lg:block hidden`}
             >
               MetaSphere UI
             </h1>
-            <nav className="flex flex-col gap-2">
+            <nav className="flex flex-col gap-2 text-lg">
               <NavLink
                 to="/home"
                 className={({ isActive }) => getLinkClass(isActive)}

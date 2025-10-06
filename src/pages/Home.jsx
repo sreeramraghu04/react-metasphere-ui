@@ -15,16 +15,16 @@ export default function Home() {
       {/* Main content */}
       <main className="flex flex-col items-center justify-center flex-grow relative z-10 px-4 sm:px-6 lg:px-8 py-10">
         <h1 className="text-3xl sm:text-5xl md:text-6xl font-extrabold animate-pulse">
-          🌌
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-500 to-indigo-400 animate-pulse">
             Welcome to MetaSphere UI
           </span>
+          ✨
         </h1>
 
         <p className="text-gray-300 text-base sm:text-lg md:text-xl max-w-xl md:max-w-xl mt-4">
-          A futuristic React & TailwindCSS component library showcasing Neon
-          Buttons, Toggle Switches and cool Loaders. Preview, copy usage,
-          or get full component code instantly!
+          A futuristic React & TailwindCSS component library showcasing Unique
+          Buttons, Toggle Switches and cool Loaders. Preview, copy usage, or get
+          full component code instantly!
         </p>
 
         {/* Quick links */}
