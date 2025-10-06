@@ -1,5 +1,5 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import ToggleSwitch from "../components/ToggleSwitch";
 
 export default function Home() {
@@ -29,12 +29,12 @@ export default function Home() {
 
         {/* Quick links */}
         <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mt-6 w-full justify-center items-center">
-          <a
-            href="/buttons"
+          <Link
+            to="/buttons"
             className="w-full sm:w-auto px-4 py-4 sm:px-6 sm:py-6 rounded-xl sm:rounded-2xl bg-gradient-to-r from-purple-500 via-pink-500 to-indigo-500 text-white font-semibold shadow-lg hover:scale-105 sm:hover:scale-110 hover:shadow-[0_0_20px_rgba(168,85,247,0.7)] transform transition duration-300 text-sm sm:text-base"
           >
             Explore Buttons
-          </a>
+          </Link>
 
           <div className="w-full sm:w-auto relative flex items-center justify-center px-4 py-4 sm:px-6 sm:py-6 rounded-xl sm:rounded-2xl bg-gradient-to-r from-cyan-400 via-sky-500 to-blue-500 text-white font-semibold shadow-lg hover:scale-105 sm:hover:scale-110 hover:shadow-[0_0_20px_rgba(6,182,212,0.7)] transform transition duration-300 gap-2 text-sm sm:text-base">
             <ToggleSwitch
@@ -48,8 +48,8 @@ export default function Home() {
             <span>Explore Toggles</span>
           </div>
 
-          <a
-            href="/loaders"
+          <Link
+            to="/loaders"
             className="w-full sm:w-auto relative flex items-center justify-center px-4 py-4 sm:px-6 sm:py-6 rounded-xl sm:rounded-2xl bg-gradient-to-r from-pink-200 via-purple-800 to-indigo-800 text-white font-semibold shadow-lg hover:scale-105 sm:hover:scale-110 hover:shadow-[0_0_20px_rgba(236,72,153,0.7)] transform transition duration-300 gap-2 text-sm sm:text-base"
           >
             <span className="flex items-center justify-center w-4 h-4 sm:w-5 sm:h-5">
@@ -59,7 +59,7 @@ export default function Home() {
               </div>
             </span>
             <span>Explore Loaders</span>
-          </a>
+          </Link>
         </div>
 
         {/* Small note */}
