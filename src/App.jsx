@@ -7,7 +7,6 @@ import Home from "./pages/Home";
 import ButtonsPage from "./pages/ButtonsPage";
 import TogglePage from "./pages/TogglePage";
 import LoaderPage from "./pages/LoaderPage";
-import CardsPage from "./pages/CardsPage";
 
 export default function App() {
   return (
@@ -22,7 +21,6 @@ export default function App() {
         <Route path="/buttons" element={<ButtonsPage />} />
         <Route path="/toggles" element={<TogglePage />} />
         <Route path="/loaders" element={<LoaderPage />} />
-        <Route path="cards" element={<CardsPage />} />
       </Route>
     </Routes>
   );
