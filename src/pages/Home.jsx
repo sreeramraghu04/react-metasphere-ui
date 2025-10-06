@@ -21,14 +21,14 @@ export default function Home() {
           </span>
         </h1>
 
-        <p className="text-gray-300 text-base sm:text-lg md:text-xl max-w-xl md:max-w-2xl mt-4">
+        <p className="text-gray-300 text-base sm:text-lg md:text-xl max-w-xl md:max-w-xl mt-4">
           A futuristic React & TailwindCSS component library showcasing Neon
-          Buttons, Toggle Switches, Loaders and cool Cards. Preview, copy usage,
+          Buttons, Toggle Switches and cool Loaders. Preview, copy usage,
           or get full component code instantly!
         </p>
 
         {/* Quick links */}
-        <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mt-6 w-full justify-center items-center">
+        <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mt-10 w-full justify-center items-center">
           <Link
             to="/buttons"
             className="w-full sm:w-auto px-4 py-4 sm:px-6 sm:py-6 rounded-xl sm:rounded-2xl bg-gradient-to-r from-purple-500 via-pink-500 to-indigo-500 text-white font-semibold shadow-lg hover:scale-105 sm:hover:scale-110 hover:shadow-[0_0_20px_rgba(168,85,247,0.7)] transform transition duration-300 text-sm sm:text-base"
@@ -50,7 +50,7 @@ export default function Home() {
 
           <Link
             to="/loaders"
-            className="w-full sm:w-auto relative flex items-center justify-center px-4 py-4 sm:px-6 sm:py-6 rounded-xl sm:rounded-2xl bg-gradient-to-r from-pink-200 via-purple-800 to-indigo-800 text-white font-semibold shadow-lg hover:scale-105 sm:hover:scale-110 hover:shadow-[0_0_20px_rgba(236,72,153,0.7)] transform transition duration-300 gap-2 text-sm sm:text-base"
+            className="w-full sm:w-auto relative flex items-center justify-center px-4 py-4 sm:px-6 sm:py-6 rounded-xl sm:rounded-2xl bg-gradient-to-r from-green-300 via-purple-800 to-indigo-800 text-white font-semibold shadow-lg hover:scale-105 sm:hover:scale-110 hover:shadow-[0_0_20px_rgba(236,72,153,0.7)] transform transition duration-300 gap-2 text-sm sm:text-base"
           >
             <span className="flex items-center justify-center w-4 h-4 sm:w-5 sm:h-5">
               <div className="relative w-4 h-4 sm:w-5 sm:h-5">

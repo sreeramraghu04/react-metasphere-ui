@@ -94,13 +94,6 @@ export default function Layout() {
               >
                 Loaders
               </NavLink>
-              <NavLink
-                to="/cards"
-                className={({ isActive }) => getLinkClass(isActive)}
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                Cards
-              </NavLink>
             </nav>
           </div>
         </aside>
