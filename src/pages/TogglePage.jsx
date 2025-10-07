@@ -494,7 +494,7 @@ export default function TogglePage() {
       <div className="max-w-7xl mx-auto">
         <header className="mb-8 md:mb-10 lg:mb-12">
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-2 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-            ⏻ Toggle Switches Gallery
+            ⏻ Toggle Switches
           </h2>
           <p className="text-gray-400 text-sm md:text-base lg:text-lg max-w-3xl">
             A collection of beautifully designed, fully customizable toggle
